@@ -7,7 +7,6 @@ car_data = pd.read_csv('vehicles_us.csv')
 
 # Crear un botón
 hist_button = st.button('Construir histograma')
-bar_button = st.button('Construir gráfico')
 
 if hist_button:  # Al hacer clic en el botón
     # Escribir un mensaje
@@ -22,20 +21,9 @@ if hist_button:  # Al hacer clic en el botón
 # Crear una casilla de verificación
 build_histogram = st.checkbox('Construir un histograma')
 
-if bar_button:  # Al hacer clic en el botón
-    # Escribir un mensaje
-    st.write('Creación de un gráfico para el conjunto de datos de anuncios de venta de coches')
-    
-    # Crear un histograma
-    fig = px.bar(car_data, x="odometer")
-    
-    # Mostrar un gráfico Plotly interactivo
-    st.plotly_chart(fig, use_container_width=True)
+# Crear un gráfico de barras
+bar_fig = px.bar(car_data, x='year', y='price')
 
-# Crear una casilla de verificación
-build_chart = st.checkbox('Construir un gráfico')
-
-
-
-
+# Mostrar el gráfico de barras
+st.plotly_chart(bar_fig)
 
