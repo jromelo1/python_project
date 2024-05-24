@@ -22,7 +22,7 @@ if hist_button:  # Al hacer clic en el botón
 build_histogram = st.checkbox('Construir un histograma')
 
 # Crear un gráfico de barras
-bar_fig = px.bar(car_data, x='year', y='price')
+bar_fig = px.bar(car_data, x='model_year', y='price')
 
 # Mostrar el gráfico de barras
 st.plotly_chart(bar_fig)
