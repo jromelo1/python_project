@@ -16,7 +16,7 @@ if hist_button:  # Al hacer clic en el botón
     st.write('Creación de un histograma para el conjunto de datos de anuncios de venta de coches')
     
     # Crear un histograma
-    fig = px.histogram(car_data, x="odometer", y="price")
+    fig = px.histogram(car_data, x="odometer")
     
     # Mostrar un gráfico Plotly interactivo
     st.plotly_chart(fig, use_container_width=True)
@@ -25,7 +25,7 @@ if hist_button:  # Al hacer clic en el botón
     st.write('Creación de un gráfico para el conjunto de datos de venta de coches')
 
 # Crear un gráfico de barras
-bar_fig = px.bar(car_data, x='model_year', y='price')
+bar_fig = px.bar(car_data, x="odometer", y='price')
 
 # Mostrar el gráfico de barras
 st.plotly_chart(bar_fig)
