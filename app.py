@@ -25,8 +25,8 @@ if hist_button:  # Al hacer clic en el botón
     st.write('Creación de un gráfico para el conjunto de datos de venta de coches')
 
 # Crear un gráfico de barras
-bar_fig = px.bar(car_data, x="odometer", y='price')
+scatter_fig = px.scatter(car_data, x="odometer", y='price')
 
 # Mostrar el gráfico de barras
-st.plotly_chart(bar_fig)
+st.plotly_chart(scatter_fig)
 
